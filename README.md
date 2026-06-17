@@ -1,77 +1,157 @@
-# 🤟 Real-Time Indian Sign Language (ISL) Detector
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10-orange.svg)
-![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10-green.svg)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.8-lightgrey.svg)
-![Accuracy](https://img.shields.io/badge/Accuracy-99.0%25-success.svg)
+# 🤟 ISL Real-Time Detector
+### Advanced Neural Translation for Indian Sign Language
 
-A high-performance, real-time Indian Sign Language (ISL) detection system powered by **Google MediaPipe** and **Deep Learning (LSTM)**. This project detects static and dynamic hand gestures through a webcam with **99.00% accuracy** and translates them into text instantly.
+[![Live Demo](https://img.shields.io/badge/Website-Live_Demo-00f0ff?style=for-the-badge&logo=vercel)](https://thepeeyushyadav.github.io/ISL-REALTIME-DETECTOR/)
+[![Release](https://img.shields.io/github/v/release/thepeeyushyadav/ISL-REALTIME-DETECTOR?style=for-the-badge&color=bc13fe)](https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR/releases/latest)
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg?style=for-the-badge&logo=python)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10-orange.svg?style=for-the-badge&logo=tensorflow)](https://www.tensorflow.org/)
+[![MediaPipe](https://img.shields.io/badge/MediaPipe-0.10-green.svg?style=for-the-badge&logo=google)](https://google.github.io/mediapipe/)
+[![Accuracy](https://img.shields.io/badge/Accuracy-99.0%25-success.svg?style=for-the-badge)](https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR)
 
-## ✨ Features & Highlights
-- **100% Custom Built Dataset:** The most unique aspect of this project is that the dataset was **created entirely from scratch** by the author. Instead of relying on generic pre-existing datasets (like Kaggle INCLUDE), thousands of frames were manually recorded, curated, and augmented to ensure zero domain-gap and maximum real-world reliability.
-- **10 Practical ISL Gestures:** Trained specifically on 10 hand-picked, highly useful Indian Sign Language gestures.
-- **Lightning Fast:** Uses MediaPipe to extract holistic keypoints (126 hand coordinates + 99 pose coordinates) resulting in incredibly fast inference times.
-- **Deep Sequence Learning:** Uses a deep Long Short-Term Memory (LSTM) neural network architecture to process sequences of frames.
-- **Data Augmentation:** Implements custom spatial scaling, temporal warping, and Gaussian noise augmentation for extreme robustness.
+An ultra-optimized, real-time Deep Learning pipeline that translates spatial hand gestures into English text with **99.00% validation accuracy**. Engineered entirely from scratch without relying on pre-existing generic datasets.
 
----
+[**Explore the Documentation Website**](https://thepeeyushyadav.github.io/ISL-REALTIME-DETECTOR/) • [**Download Windows Executable**](https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR/releases/latest)
 
-## 🎯 Supported Signs
-
-The model currently recognizes the following 10 practical signs seamlessly:
-1. 👍 **Thumbs Up** (Yes / Good)
-2. 👎 **Thumbs Down** (No / Bad)
-3. ✋ **Open Palm** (Stop / Wait)
-4. ✊ **Closed Hand** (Solid / Hold)
-5. ✌️ **Victory** (Win / Peace)
-6. 👌 **OK** (Perfect / Understood)
-7. 🤟 **Awesome** (Super / Rock On)
-8. 🤙 **Call Me**
-9. 👉 **Right**
-10. 👈 **Left**
+</div>
 
 ---
 
-## 🚀 Installation & Usage
+## 📖 Table of Contents
+- [Executive Summary](#-executive-summary)
+- [The Custom Dataset Advantage](#-the-custom-dataset-advantage)
+- [Supported Gestures](#-supported-gestures)
+- [Neural Architecture Pipeline](#-neural-architecture-pipeline)
+- [Installation & Quick Start](#-installation--quick-start)
+- [Project Structure](#-project-structure)
+- [Future Scope](#-future-scope)
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/yourusername/ISL-Realtime-Detector.git
-cd ISL-Realtime-Detector
+---
+
+## 🚀 Executive Summary
+
+The **ISL Real-Time Detector** bridges the communication gap by translating Indian Sign Language into readable text at **30 Frames Per Second (FPS)**. 
+
+Unlike standard introductory computer vision projects, this system avoids pre-packaged datasets like *Kaggle INCLUDE*. Instead, it utilizes a **100% custom-curated dataset** collected and augmented by the author. This guarantees zero domain-gap, allowing the model to perform flawlessly across different lighting conditions, hand sizes, and webcam resolutions.
+
+---
+
+## 🗄️ The Custom Dataset Advantage
+
+The foundation of this 99% accurate model lies in its rigorous data collection and preprocessing pipeline:
+
+1. **Manual Frame Capture:** Thousands of sequential frames were captured focusing strictly on precise ISL semantics.
+2. **Keypoint Extraction:** Instead of processing heavy RGB images (which leads to overfitting and slow inference), the pipeline uses `MediaPipe Holistic` to extract **225 precise spatial coordinates** (X, Y, Z visibility) per frame.
+3. **Extreme Augmentation:** To make the model hyper-resilient, the dataset was artificially expanded by **500%** using:
+   - *Spatial Scaling:* Simulating users sitting close or far from the camera.
+   - *Temporal Warping:* Handling fast vs. slow signers.
+   - *Gaussian Noise:* Adding jitter to coordinates to prevent the neural network from memorizing exact pixel locations.
+
+---
+
+## 🤟 Supported Gestures
+
+The deep neural network has been trained to recognize 10 highly practical gestures:
+
+| Emoji | Gesture Name | Semantic Meaning |
+| :---: | :--- | :--- |
+| 👍 | **Thumbs Up** | Yes / Approval / Good |
+| 👎 | **Thumbs Down** | No / Disapproval / Bad |
+| ✋ | **Open Palm** | Stop / Wait / Halt |
+| ✊ | **Closed Hand** | Solid / Hold / Ready |
+| ✌️ | **Victory** | Win / Peace / Number 2 |
+| 👌 | **OK** | Perfect / Understood |
+| 🤟 | **Awesome** | Super / Rock On |
+| 🤙 | **Call Me** | Telephone / Contact |
+| 👉 | **Right** | Directional Indicator |
+| 👈 | **Left** | Directional Indicator |
+
+---
+
+## 🧠 Neural Architecture Pipeline
+
+The system is built on a highly optimized dual-phase architecture:
+
+```mermaid
+graph TD
+    A[Raw Webcam Video] -->|OpenCV (30 FPS)| B(MediaPipe Holistic)
+    B -->|Extract 225 Keypoints| C{Temporal Buffer}
+    C -->|Wait for 30 Frames| D[Deep LSTM Network]
+    D --> E[LSTM Layer 1: 64 Units]
+    E --> F[Dropout: 20%]
+    F --> G[LSTM Layer 2: 128 Units]
+    G --> H[Dropout: 20%]
+    H --> I[LSTM Layer 3: 64 Units]
+    I --> J[Dense Layers]
+    J --> K([Softmax: 10 Class Probability])
 ```
 
-### 2. Install Dependencies
-Make sure you have Python 3.9+ installed. Run the following command to install required libraries:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run the Real-Time App
-Run the detection script. This will open your webcam and start predicting gestures in real-time.
-```bash
-python app/realtime_detection.py
-```
-*(Press `Q` to quit the application.)*
+- **Optimizer:** `Adam`
+- **Loss Function:** `Categorical Crossentropy`
+- **Early Stopping:** Triggered at 135 epochs when validation loss plateaued, preventing overfitting.
 
 ---
 
-## 🧠 Model Architecture & Training
+## 💻 Installation & Quick Start
 
-The model was trained for **135 epochs** (with early stopping) and achieved a flawless validation test accuracy of **99.00%**.
+### Option 1: Standalone Windows App (No Code Required)
+The easiest way to use the application is to download the compiled executable.
+1. Go to the [**Releases Page**](https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR/releases/latest) and download `ISL-Detector-v1.zip`.
+2. Extract the folder.
+3. Double-click `ISL-Detector.exe`.
 
-- **Feature Extraction:** MediaPipe Holistic is used to extract `(30, 225)` shape sequences.
-- **Network:** 
-  - `LSTM(64) -> Dropout(0.2) -> LSTM(128) -> Dropout(0.2) -> LSTM(64)`
-  - `Dense(64) -> Dense(32) -> Softmax(10)`
-- **Optimizer:** Adam
-- **Loss:** Categorical Crossentropy
+### Option 2: Python Development Setup
+If you want to view the code, train new gestures, or modify the architecture:
 
-*(If you wish to train your own custom signs, you can use the `data_collection/collect_data.py` and `model/train_model.py` scripts provided in the source code.)*
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR.git
+   cd ISL-REALTIME-DETECTOR
+   ```
+
+2. **Install Dependencies**
+   *(Python 3.9 or 3.10 is recommended)*
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run Real-Time Inference**
+   ```bash
+   python app/realtime_detection.py
+   ```
 
 ---
 
-## 👨‍💻 Deployment & Future Scope
-The next step for this project is to package it into a standalone **`.exe` desktop application** using PyInstaller, so that anyone can download and run the software without writing a single line of code or installing Python.
+## 📂 Project Structure
 
-Feel free to fork this project and add more complex dynamic sentences to the dataset!
+```text
+ISL-REALTIME-DETECTOR/
+├── app/
+│   ├── realtime_detection.py   # Main webcam inference loop
+│   └── video_detection.py      # Batch processing for pre-recorded videos
+├── data_collection/
+│   ├── collect_data.py         # Script to record your own custom signs
+│   └── augment_data.py         # Applies Gaussian noise and spatial scaling
+├── docs/                       # Premium Website & Landing Page HTML/CSS
+├── model/
+│   ├── lstm_model.py           # Neural network architecture definition
+│   ├── train_model.py          # Training loop with Early Stopping
+│   └── isl_lstm_model.h5       # Pre-trained weights (99% Accuracy)
+├── utils/
+│   ├── mediapipe_utils.py      # Holistic extraction wrappers
+│   └── visualization.py        # OpenCV drawing functions
+├── config.py                   # Global constants and PyInstaller paths
+└── main.py                     # Entrypoint for the .exe compiler
+```
+
+---
+
+## 🔮 Future Scope
+- **Dynamic Sentence Formulation:** Transitioning from isolated word translation to full NLP-powered sentence structuring.
+- **Mobile Deployment:** Porting the TensorFlow model to `.tflite` for Android/iOS integration.
+
+<br>
+<div align="center">
+    <i>Architected & Developed by <b>Peeyush Yadav</b></i>
+</div>
