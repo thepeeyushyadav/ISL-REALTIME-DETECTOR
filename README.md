@@ -75,16 +75,16 @@ The system is built on a highly optimized dual-phase architecture:
 
 ```mermaid
 graph TD
-    A[Raw Webcam Video] -->|OpenCV (30 FPS)| B(MediaPipe Holistic)
-    B -->|Extract 225 Keypoints| C{Temporal Buffer}
-    C -->|Wait for 30 Frames| D[Deep LSTM Network]
-    D --> E[LSTM Layer 1: 64 Units]
-    E --> F[Dropout: 20%]
-    F --> G[LSTM Layer 2: 128 Units]
-    G --> H[Dropout: 20%]
-    H --> I[LSTM Layer 3: 64 Units]
-    I --> J[Dense Layers]
-    J --> K([Softmax: 10 Class Probability])
+    A["Raw Webcam Video"] -->|"OpenCV (30 FPS)"| B("MediaPipe Holistic")
+    B -->|"Extract 225 Keypoints"| C{"Temporal Buffer"}
+    C -->|"Wait for 30 Frames"| D["Deep LSTM Network"]
+    D --> E["LSTM Layer 1: 64 Units"]
+    E --> F["Dropout: 20%"]
+    F --> G["LSTM Layer 2: 128 Units"]
+    G --> H["Dropout: 20%"]
+    H --> I["LSTM Layer 3: 64 Units"]
+    I --> J["Dense Layers"]
+    J --> K(["Softmax: 10 Class Probability"])
 ```
 
 - **Optimizer:** `Adam`
