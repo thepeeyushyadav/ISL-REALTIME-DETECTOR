@@ -57,21 +57,16 @@ def parse_args():
 def load_model_and_labels() -> tuple:
     """Load LSTM model and label map. Returns (model, idx_to_sign)."""
     if not os.path.exists(MODEL_PATH):
-        print(f"❌ Model not found: {MODEL_PATH}")
+        print(f"[ERROR] Model not found: {MODEL_PATH}")
         print("   Train first: python model/train_model.py")
-        sys.exit(1)
-
-    label_map_path = os.path.join(BASE_DIR, "dataset", "label_map.json")
-    if not os.path.exists(label_map_path):
-        print(f"❌ Label map not found: {label_map_path}")
         sys.exit(1)
 
     print(f"  Loading model: {MODEL_PATH}")
     model = tf.keras.models.load_model(MODEL_PATH)
 
-    with open(label_map_path) as f:
-        label_map = json.load(f)
-    idx_to_sign = {v: k for k, v in label_map.items()}
+    # Reconstruct label map identically to how train_model.py built it
+    from config import ISL_SIGNS
+    idx_to_sign = {i: sign for i, sign in enumerate(sorted(ISL_SIGNS))}
 
     print(f"  Loaded {len(idx_to_sign)} sign classes")
     return model, idx_to_sign
