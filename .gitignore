@@ -1,0 +1,19 @@
+# Python environments and cache
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Project specific data
+dataset/
+logs/
+*.npy
+dataset_kaggle_backup/
+
+# Exclude large models (Optional: You can keep isl_lstm_model.h5 if it's small)
+# model/*.h5
+
+# PyInstaller build files (for future .exe generation)
+build/
+dist/
+*.spec

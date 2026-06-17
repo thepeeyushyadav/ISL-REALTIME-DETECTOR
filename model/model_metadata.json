@@ -1,0 +1,21 @@
+{
+  "signs": [
+    "Call Me",
+    "Closed Hand",
+    "I Love You",
+    "Left",
+    "OK",
+    "Open Palm",
+    "Right",
+    "Thumbs Down",
+    "Thumbs Up",
+    "Victory"
+  ],
+  "num_classes": 10,
+  "sequence_length": 30,
+  "num_features": 225,
+  "test_accuracy": 0.99,
+  "test_top3_accuracy": 1.0,
+  "training_epochs": 135,
+  "training_time_min": 10.46
+}
