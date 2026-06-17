@@ -76,36 +76,26 @@ def build_lstm_model(
 
 
 def get_callbacks(log_dir: str, model_path: str) -> list:
-    """Return standard training callbacks."""
-    return [
-        # Save best model weights
-        tf.keras.callbacks.ModelCheckpoint(
-            filepath=model_path,
-            monitor="val_accuracy",
-            save_best_only=True,
-            verbose=1,
-        ),
-        # Stop early if no improvement
-        tf.keras.callbacks.EarlyStopping(
-            monitor="val_accuracy",
-            patience=25,
-            restore_best_weights=True,
-            verbose=1,
-        ),
-        # Reduce LR on plateau
-        tf.keras.callbacks.ReduceLROnPlateau(
-            monitor="val_loss",
-            factor=0.5,
-            patience=10,
-            min_lr=1e-6,
-            verbose=1,
-        ),
-        # TensorBoard logging (disabled due to Windows path unicode bug with '—')
-        # tf.keras.callbacks.TensorBoard(
-        #     log_dir=log_dir,
-        #     histogram_freq=1,
-        # ),
-    ]
+    """Return a list of Keras callbacks for training."""
+    from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
+
+    early_stop = EarlyStopping(
+        monitor="val_loss",
+        patience=25,
+        restore_best_weights=True,
+        verbose=1,
+    )
+
+    reduce_lr = ReduceLROnPlateau(
+        monitor="val_loss",
+        factor=0.5,
+        patience=10,
+        min_lr=1e-5,
+        verbose=1,
+    )
+
+    # Removed TensorBoard and ModelCheckpoint to avoid Windows path/lock issues
+    return [early_stop, reduce_lr]
 
 
 if __name__ == "__main__":

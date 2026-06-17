@@ -213,8 +213,14 @@ def main():
 
             cv2.imshow("ISL Sign Language Detector", image)
 
-            # ── Key Controls ──────────────────────────────────
+            # ── Key Controls & Window Close Event ─────────────
             key = cv2.waitKey(1) & 0xFF
+            
+            # Check if user clicked the 'X' (close) button on the window
+            if cv2.getWindowProperty("ISL Sign Language Detector", cv2.WND_PROP_VISIBLE) < 1:
+                print("\n[QUIT] Window closed.")
+                break
+
             if key == ord("q"):
                 print("\n[QUIT] Exiting.")
                 break
