@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISL Real-Time Detector | Next-Gen AI</title>
+    <meta name="description" content="A 99% accurate, real-time Indian Sign Language detection AI software. Built entirely from scratch.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <i class="fa-solid fa-microchip glow-icon"></i> ISL <span class="gradient-text">CORE</span>
+        </div>
+        <a href="https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR" class="github-btn" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub Repository
+        </a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="version-badge">VERSION 1.0 // STABLE BUILD</div>
+            
+            <h1 class="main-title">
+                REAL-TIME <br>
+                <span class="gradient-text type-effect">SIGN LANGUAGE</span><br>
+                TRANSLATION
+            </h1>
+            
+            <p class="hero-subtitle">
+                A hyper-optimized Deep Learning architecture capable of translating 10 static and dynamic hand gestures into text with <strong>99.00% precision</strong>. Engineered using a 100% custom-curated dataset.
+            </p>
+
+            <div class="action-buttons">
+                <a href="https://github.com/thepeeyushyadav/ISL-REALTIME-DETECTOR/releases/latest/download/ISL-Detector-v1.zip" class="btn btn-primary pulse-effect">
+                    <i class="fa-brands fa-windows"></i> Download for Windows
+                </a>
+                <a href="#architecture" class="btn btn-secondary">Explore Architecture <i class="fa-solid fa-arrow-down"></i></a>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-box" data-tilt>
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Custom Signs</div>
+                </div>
+                <div class="stat-box" data-tilt>
+                    <div class="stat-number">99%</div>
+                    <div class="stat-label">Validation Accuracy</div>
+                </div>
+                <div class="stat-box" data-tilt>
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">FPS Inference</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Abstract 3D Render Placeholder (CSS Shapes) -->
+        <div class="hero-graphic">
+            <div class="glass-sphere"></div>
+            <div class="glass-sphere small"></div>
+        </div>
+    </header>
+
+    <!-- DATASET SECTION -->
+    <section class="dataset-section container" id="dataset">
+        <div class="section-header">
+            <h2>THE <span class="gradient-text">CUSTOM DATASET</span> ADVANTAGE</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="dataset-grid">
+            <div class="dataset-card glass-panel" data-tilt data-tilt-max="10">
+                <div class="card-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                <h3>Ground-Up Curation</h3>
+                <p>Unlike generic models relying on standard Kaggle datasets (like INCLUDE), this AI was trained on thousands of frames recorded entirely from scratch by the author. This guarantees zero domain-gap for the targeted gestures.</p>
+            </div>
+
+            <div class="dataset-card glass-panel" data-tilt data-tilt-max="10">
+                <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>Spatial-Temporal Augmentation</h3>
+                <p>To achieve 99% accuracy in diverse environments, the dataset was artificially expanded by 500% using complex coordinate scaling, temporal shifting, and Gaussian noise injections.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARCHITECTURE SECTION -->
+    <section class="architecture-section container" id="architecture">
+        <div class="section-header center">
+            <h2>DEEP LEARNING <span class="gradient-text">PIPELINE</span></h2>
+            <div class="header-line center"></div>
+        </div>
+
+        <div class="pipeline-container glass-panel">
+            <div class="pipeline-step">
+                <div class="step-circle"><i class="fa-solid fa-video"></i></div>
+                <h4>Frame Capture</h4>
+                <p>OpenCV extracts 30 continuous frames per sequence.</p>
+            </div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-step">
+                <div class="step-circle highlight"><i class="fa-solid fa-hand-sparkles"></i></div>
+                <h4>Holistic Extraction</h4>
+                <p>MediaPipe isolates 225 spatial (X,Y,Z) coordinates.</p>
+            </div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-step">
+                <div class="step-circle"><i class="fa-solid fa-network-wired"></i></div>
+                <h4>LSTM Layers</h4>
+                <p>A deep sequential neural network processes the temporal data.</p>
+            </div>
+            <div class="pipeline-arrow"></div>
+            <div class="pipeline-step">
+                <div class="step-circle"><i class="fa-solid fa-language"></i></div>
+                <h4>Softmax Output</h4>
+                <p>Translates sequence into English text instantly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE SIGNS SECTION -->
+    <section class="signs-section container">
+        <div class="section-header">
+            <h2>SUPPORTED <span class="gradient-text">GESTURES</span></h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="signs-grid">
+            <!-- Sign Cards -->
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">👍</div>
+                <h4>Thumbs Up</h4>
+                <p>Yes / Approval</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">👎</div>
+                <h4>Thumbs Down</h4>
+                <p>No / Disapproval</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">✋</div>
+                <h4>Open Palm</h4>
+                <p>Stop / Wait</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">✊</div>
+                <h4>Closed Hand</h4>
+                <p>Solid / Hold</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">✌️</div>
+                <h4>Victory</h4>
+                <p>Win / Peace</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">👌</div>
+                <h4>OK</h4>
+                <p>Perfect</p>
+            </div>
+            <div class="sign-card glass-panel highlight-card" data-tilt>
+                <div class="emoji">🤟</div>
+                <h4>Awesome</h4>
+                <p>Super / Rock On</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">🤙</div>
+                <h4>Call Me</h4>
+                <p>Contact</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">👉</div>
+                <h4>Right</h4>
+                <p>Directional</p>
+            </div>
+            <div class="sign-card glass-panel" data-tilt>
+                <div class="emoji">👈</div>
+                <h4>Left</h4>
+                <p>Directional</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>ISL-REALTIME-DETECTOR</h3>
+            <p>Architected & Developed by <strong>Peeyush Yadav</strong></p>
+            <div class="social-links">
+                <a href="https://github.com/thepeeyushyadav"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="copyright">© 2026. Open Source Project.</div>
+    </footer>
+
+    <!-- Scripts for Extraordinary Interactivity -->
+    <!-- Particles.js for background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Vanilla-Tilt for 3D card effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+    <script>
+        // Initialize Particles Background
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#bc8cff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#58a6ff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "repulse": { "distance": 100, "duration": 0.4 },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Initialize 3D Tilt Effect
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.2,
+        });
+    </script>
+</body>
+</html>

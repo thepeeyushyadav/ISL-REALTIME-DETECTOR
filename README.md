@@ -26,7 +26,7 @@ The model currently recognizes the following 10 practical signs seamlessly:
 4. ✊ **Closed Hand** (Solid / Hold)
 5. ✌️ **Victory** (Win / Peace)
 6. 👌 **OK** (Perfect / Understood)
-7. 🤟 **I Love You**
+7. 🤟 **Awesome** (Super / Rock On)
 8. 🤙 **Call Me**
 9. 👉 **Right**
 10. 👈 **Left**

@@ -19,7 +19,7 @@ ISL_SIGNS = [
     "Closed Hand",
     "Victory",
     "OK",
-    "I Love You",
+    "Awesome",
     "Call Me",
     "Right",
     "Left",
@@ -31,7 +31,13 @@ NUM_FEATURES = 225     # 21*2 hands*3 + 33 pose*3 = 126 + 99
 
 # ─── Paths ────────────────────────────────────────────────────────────────────
 import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+import sys
+
+# PyInstaller compatibility: when running as bundled executable, extract to sys._MEIPASS
+if getattr(sys, 'frozen', False):
+    BASE_DIR = sys._MEIPASS
+else:
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATASET_DIR = os.path.join(BASE_DIR, "dataset")
 MODEL_DIR = os.path.join(BASE_DIR, "model")
 MODEL_PATH = os.path.join(MODEL_DIR, "isl_lstm_model.h5")
