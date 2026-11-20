@@ -153,5 +153,5 @@ ISL-REALTIME-DETECTOR/
 
 <br>
 <div align="center">
-    <i>Architected & Developed by <b>Peeyush Yadav</b></i>
+    <i>Architected & Developed by <b>Piyush Pal</b></i>
 </div>
